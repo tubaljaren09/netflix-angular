@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
 
   // Replace with your actual API endpoint.
   private apiUrl: string =
-    'https://api.themoviedb.org/3/movie/top_rated?api_key=6c1da559fcff94b3b34dd3e939e1db51&language=en-US&page=1';
+    'https://api.themoviedb.org/3/movie/popular?api_key=6c1da559fcff94b3b34dd3e939e1db51&language=en-US&page=1';
 
   constructor(private http: HttpClient) {}
 
