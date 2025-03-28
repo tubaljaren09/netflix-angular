@@ -1,0 +1,13 @@
+<div>
+  <h2 class="row-title">{{ title }}</h2>
+  <div class="slider-container">
+    <button class="chevron left" (click)="slideLeft()">&#9664;</button>
+    <div #slider class="slider">
+      <app-movie
+        *ngFor="let item of movies; let i = index"
+        [item]="item"
+      ></app-movie>
+    </div>
+    <button class="chevron right" (click)="slideRight()">&#9654;</button>
+  </div>
+</div>

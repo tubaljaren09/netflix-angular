@@ -1,0 +1,52 @@
+.row-title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.chevron {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.chevron:hover {
+  opacity: 1;
+}
+
+.chevron.left {
+  left: 0;
+}
+
+.chevron.right {
+  right: 0;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}

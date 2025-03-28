@@ -1,0 +1,23 @@
+<div class="navbar">
+  <a routerLink="/" class="logo-link">
+    <h1 class="logo">NETFLIX</h1>
+  </a>
+  <ng-container *ngIf="user; else guestLinks">
+    <div class="user-links">
+      <a routerLink="/account">
+        <button class="account-button">Account</button>
+      </a>
+      <button (click)="handleLogout()" class="logout-button">Logout</button>
+    </div>
+  </ng-container>
+  <ng-template #guestLinks>
+    <div class="guest-links">
+      <a routerLink="login">
+        <button class="signin-button">Sign In</button>
+      </a>
+      <a routerLink="signup">
+        <button class="signup-button">Sign Up</button>
+      </a>
+    </div>
+  </ng-template>
+</div>

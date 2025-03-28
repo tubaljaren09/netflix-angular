@@ -1,0 +1,18 @@
+<div class="movie-container">
+  <img
+    class="movie-image"
+    [src]="'https://image.tmdb.org/t/p/w500/' + item.backdrop_path"
+    [alt]="item.title"
+  />
+  <div class="overlay">
+    <p class="movie-title">{{ item.title }}</p>
+    <button class="heart-button" (click)="saveMovie()">
+      <ng-container *ngIf="like; else notLiked">
+        <span class="icon-heart-filled">&#10084;</span>
+      </ng-container>
+      <ng-template #notLiked>
+        <span class="icon-heart-outline">&#9825;</span>
+      </ng-template>
+    </button>
+  </div>
+</div>
